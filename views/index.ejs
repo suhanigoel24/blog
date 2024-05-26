@@ -1,0 +1,36 @@
+<div class="author">
+    <h1 class="author_heading">"Hey, This is Suhani."</h1>
+    <p  class="author_body">Building dreams, one line of code at a time.</p>
+
+</div>
+
+<img src="\img\web-development-application-design-coding-and-programming-on-laptop-and-smartphone-concept-with-programming-language-and-program-code-and-layout-on-screen-vector.jpg" alt="background image" class="hero-image" width="981" height="528">
+
+
+<section class="articles">
+    <div class="articles_heading">
+    <h1 class="articles_heading">Latest Posts</h1>
+    </div>
+
+    <ul class="article-ul">
+
+        <% data.forEach(post => { %>
+
+
+       
+        <li>
+       <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="article-list_date"><%= post.createdAt.toDateString() %></span>
+            </a>
+        </li>
+        
+        <% }) %>
+    </ul>
+
+    <% if (nextPage !== null){  %>
+        <a href="/?page= <%= nextPage %>" class="pagination">&lt; View Older Posts </a>
+        <% } %>
+       
+
+</section>
