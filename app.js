@@ -13,7 +13,7 @@ const MongoStore = require('connect-mongo');
 const app = express();
 const port = process.env.PORT|| 3000;
 
-console.log('MongoDB URI:', process.env.MONGODB_URI);
+console.log('MongoDB URI:', process.env.MONGO_URI);
 
 connectDB();
 
